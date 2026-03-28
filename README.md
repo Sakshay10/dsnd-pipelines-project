@@ -1,55 +1,100 @@
-# README Template
+# Fashion Recommendation Prediction Pipeline
 
-Below is a template provided for use when building your README file for students.
+This project builds an end-to-end machine learning pipeline to predict whether a customer would recommend a product based on review text, customer demographics, and product categories.
 
-# Project Title
+The project demonstrates how to combine Natural Language Processing (NLP) with structured data in a single pipeline and includes a Streamlit dashboard for real-time predictions.
 
-Project description goes here.
+---
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+Follow the steps below to run this project on your local machine.
 
-### Dependencies
+---
 
-```
-Examples here
-```
+## Dependencies
 
-### Installation
+The project uses the following Python libraries:
 
-Step by step explanation of how to get a dev environment running.
+- pandas  
+- numpy  
+- scikit-learn  
+- spacy  
+- matplotlib  
+- joblib  
+- streamlit  
 
-List out the steps
+---
 
-```
-Give an example here
-```
+## Installation
+
+1. Clone the repository:
+-git clone https://github.com/Sakshay10/dsnd-pipelines-project.git
+
+-cd dsnd-pipelines-project
+
+
+2. Install required libraries:
+-pip install -r requirements.txt
+
+
+3. Download spaCy model:
+-python -m spacy download en_core_web_sm
+
+
+4. Run the Jupyter Notebook:
+- Open the notebook file
+- Run all cells step-by-step to train the model
+
+5. (Optional) Run the dashboard:
+
+
+---
 
 ## Testing
 
-Explain the steps needed to run any automated tests
+This project does not include unit tests. Instead, model performance is validated using evaluation metrics.
 
-### Break Down Tests
+---
 
-Explain what each test does and why
+## Break Down Tests
 
-```
-Examples here
-```
+The model is evaluated using:
+
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+
+The dataset is split into training and testing sets to ensure proper evaluation on unseen data.
+
+---
 
 ## Project Instructions
 
-This section should contain all the student deliverables for this project.
+The project follows these steps:
+
+1. Data exploration to understand structure and missing values  
+2. Feature engineering using TF-IDF and spaCy-based features  
+3. Building a unified machine learning pipeline using ColumnTransformer  
+4. Training a Logistic Regression model  
+5. Evaluating model performance using classification metrics  
+6. Fine-tuning the model using GridSearchCV  
+7. Saving the trained pipeline as a `.pkl` file  
+8. Creating a Streamlit dashboard for real-time predictions  
+
+---
 
 ## Built With
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+- pandas – Data manipulation  
+- scikit-learn – Machine learning pipeline and modeling  
+- spaCy – NLP feature extraction  
+- Streamlit – Interactive dashboard  
+- matplotlib – Data visualization  
 
-Include all items used to build project.
+---
 
 ## License
 
-[License](LICENSE.txt)
+This project is for learning and project purposes as part of the Udacity Data Science Nanodegree.
